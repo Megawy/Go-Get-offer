@@ -1,10 +1,9 @@
-'use client'
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Provider } from "react-redux";
+import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/Components/navbar/page.jsx";
-import store from "@/Redux/store.js";
 import { FBFooter } from "@/Components/footer/page.jsx";
+import ReduxProvider from "@/Utils/Providers/reduxProvider";
+import ReactQueryProvider from "@/Utils/Providers/reactQueryProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,17 +23,19 @@ const geistMono = Geist_Mono({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Provider store={store}>
+      <ReduxProvider>
 
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-        <Navbar/>
-        {children}
-        <FBFooter/>
+        <ReactQueryProvider>
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          >
+            <Navbar />
+            {children}
+            <FBFooter />
 
-      </body>
-        </Provider>
+          </body>
+        </ReactQueryProvider>
+      </ReduxProvider>
     </html>
   );
 }
