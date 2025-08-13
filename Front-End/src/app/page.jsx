@@ -1,24 +1,21 @@
-
 import { Button } from "@/Components/chadcn-ui/button.jsx"
 import Counter from "@/Components/test/page.jsx";
-import axiosRequester from "@/lib/Axios/axios.js"
-import { use } from "react";
+import UsersList from "@/Components/test2/page";
+import { useFetch } from "@/Hooks/useFetch";
+import { Suspense } from "react";
 
 
+
+
+let usersResourses = useFetch('/users');
 
 export default function Home() {
+  let users = usersResourses.read()
 
-  async function getUsers() {
-    const res = await axiosRequester.get();
-    console.log(res.data)
-    return res.data;
-  }
-  const users = use(getUsers());
-  return <>
-    <h1>Hello From Home !</h1>
-    <Counter />
-    <div className="flex justify-center items-center flex-col">
-      <Button className='rounded-md p-2 w-2xs'>Welcome</Button>
+  function GetUsers() {
+    console.log(users)
+    return <>
+
       <div className="flex justify-around">
         {users.map((user) => (
           <div
@@ -30,6 +27,27 @@ export default function Home() {
           </div>
         ))}
       </div>
+    </>
+  }
+
+
+
+
+
+
+  return <>
+    <h1>Hello From Home !</h1>
+    <Counter />
+    <div className="flex justify-center items-center flex-col">
+      <Button className='rounded-md p-2 w-2xs'>Welcome</Button>
     </div>
+    <Suspense fallback={<h1>Loading ... </h1>}>
+      <GetUsers />
+    </Suspense>
+
+    <Suspense fallback={<p>Loading...</p>}>
+      <UsersList />
+    </Suspense>
+
   </>
 }
