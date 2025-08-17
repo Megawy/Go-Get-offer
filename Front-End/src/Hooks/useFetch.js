@@ -25,14 +25,6 @@ function wrapPromise(promise) {
 }
 
 
-// export function useFetch(url, options = {}) {
-//     const promise = axiosRequester({ url, ...options })
-//         .then((res) => res.data);
-//     return wrapPromise(promise);
-
-// }
-
-
 
 export function useFetch(url, options = {}) {
 

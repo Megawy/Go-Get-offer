@@ -10,5 +10,5 @@ export default function UsersList() {
                 <li key={user.id}>{user.name}</li>
             ))}
         </ul>
-    );
+    )
 }
