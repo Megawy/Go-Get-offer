@@ -9,7 +9,7 @@ import {
     HoverCard,
     HoverCardContent,
     HoverCardTrigger,
-} from "@/Components/chadcn-ui/hover card/hover-card"
+} from "@/Components/chadcn-ui/hoverCard/hover-card"
 
 export function HoverCardBuilder({title , content , date , image}) {
     return (

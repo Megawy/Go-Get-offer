@@ -1,71 +1,76 @@
 "use client";
 
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { setCredentials } from "@/Redux/Slices/authSlice";
-import { useQueryFetch } from "@/Hooks/useQueryFetch";
+import useForm from "@/Hooks/useForm.js";
+import { loginSchema } from "@/Utils/Validation/ValidationSchemas.js";
 
 export default function LoginPage() {
-    const dispatch = useDispatch();
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [trigger, setTrigger] = useState(false); // لتفعيل query بعد الضغط على Login
-    const [error, setError] = useState("");
-
-    const { data, refetch, isFetching } = useQueryFetch(
-        ["login", email, password],
-        "/auth/login",
-        { method: "POST", data: { email, password } },
-        { enabled: false, suspense: true }
-    );
-
-    const handleLogin = async (e) => {
-        e.preventDefault();
-        try {
-            const res = await refetch(); 
-            const { user, accessToken } = res.data;
-
-            dispatch(setCredentials({ user, token: accessToken }));
-            setError(""); // لو نجح، امسح أي error
-        } catch (err) {
-            console.error(err);
-            setError(err.response?.data?.message || "Login failed");
-        }
+    const initialValues = {
+        email: "",
+        password: "",
     };
+
+    const [submitted, setSubmitted] = useState(false);
+
+    const onSubmit = (values) => {
+        console.log("Submitted values:", values);
+        setSubmitted(true);
+    };
+
+    const formik = useForm(initialValues, loginSchema, onSubmit);
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen">
-            <form className="flex flex-col gap-2 w-80" onSubmit={handleLogin}>
+            <form
+                className="flex flex-col gap-2 w-80"
+                onSubmit={formik.handleSubmit}
+                noValidate
+            >
+                {/* Email */}
                 <input
                     type="email"
+                    name="email"
                     placeholder="Email"
-                    value={email}
-                    onChange={e => setEmail(e.target.value)}
+                    value={formik.values.email}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
                     className="border p-2 rounded"
-                    required
                 />
+                {formik.errors.email && formik.touched.email && (
+                    <p className="text-red-500 text-sm">{formik.errors.email}</p>
+                )}
+
+                {/* Password */}
                 <input
                     type="password"
+                    name="password"
                     placeholder="Password"
-                    value={password}
-                    onChange={e => setPassword(e.target.value)}
+                    value={formik.values.password}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
                     className="border p-2 rounded"
-                    required
                 />
+                {formik.errors.password && formik.touched.password && (
+                    <p className="text-red-500 text-sm">{formik.errors.password}</p>
+                )}
+
+                {/* Submit */}
                 <button
                     type="submit"
                     className="bg-blue-500 text-white p-2 rounded"
-                    disabled={isFetching}
                 >
-                    {isFetching ? "Logging in..." : "Login"}
+                    Submit
                 </button>
-                {error && <p className="text-red-500">{error}</p>}
             </form>
 
-            {data && (
+            {/* Show values only if submitted */}
+            {submitted && !Object.keys(formik.errors).length && (
                 <div className="mt-4 p-2 border rounded">
-                    <p>Logged in as: {data.user?.name}</p>
-                    <p>Token: {data.accessToken}</p>
+                    <p>Logged in as: {formik.values.email}</p>
+                    <p>
+                        Token: #
+                        {`5454123##5453adsa#da${formik.values.password}#65445d4fs5d`}
+                    </p>
                 </div>
             )}
         </div>
