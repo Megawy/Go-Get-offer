@@ -9,6 +9,7 @@ const Navbar = () => {
                 <li><Link className="px-6 py-2 bg-gray-400 rounded-md" href='/about'>About</Link></li>
                 <li><Link className="px-6 py-2 bg-gray-400 rounded-md" href='/contact-us'>Contact Us</Link></li>
                 <li><Link className="px-6 py-2 bg-gray-400 rounded-md" href='/blog'>Blog</Link></li>
+                <li><Link className="px-6 py-2 bg-gray-400 rounded-md" href='/login'>Login</Link></li>
             </ul>
         </nav>
     </>

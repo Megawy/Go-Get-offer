@@ -1,5 +1,4 @@
-import { CalendarIcon } from "lucide-react"
-
+import React from "react"
 import {
     Avatar,
     AvatarFallback,
@@ -18,7 +17,7 @@ export function HoverCardBuilder({title , content , date , image}) {
             <HoverCardTrigger asChild>
                 <Button variant="link">{title || `@nextjs`}</Button>
             </HoverCardTrigger>
-            <HoverCardContent className="w-80">
+            <HoverCardContent className="w-52">
                 <div className="flex justify-between gap-4">
                     <Avatar>
                         <AvatarImage src={image || "https://github.com/vercel.png"} />

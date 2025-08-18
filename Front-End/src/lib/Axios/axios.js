@@ -1,7 +1,7 @@
 
 import axios from "axios";
-// import { store } from "@/Redux/store";                
-// import { logout, setCredentials } from "@/modules/auth/redux/authSlice"; // Auth actions
+import { store } from "@/Redux/store";                
+import { logout, setCredentials } from "@/Redux/Slices/authSlice"; // Auth actions
 
 // Create a dedicated Axios instance for the app
 const axiosRequester = axios.create({
@@ -10,12 +10,12 @@ const axiosRequester = axios.create({
   headers: { "Content-Type": "application/json" },
 });
 
-/**
- * Security model:
- * - Access Token lives in memory/Redux and goes in the Authorization header.
- * - Refresh Token is stored by the backend in an HttpOnly cookie (browser auto-sends it).
- * - To avoid multiple refresh calls and infinite loops, we use a flag + a queue.
- */
+// /**
+//  * Security model:
+//  * - Access Token lives in memory/Redux and goes in the Authorization header.
+//  * - Refresh Token is stored by the backend in an HttpOnly cookie (browser auto-sends it).
+//  * - To avoid multiple refresh calls and infinite loops, we use a flag + a queue.
+//  */
 // let isRefreshing = false;   // Marks that a refresh call is in progress
 // let pendingQueue = [];      // Requests waiting for the new access token
 
@@ -29,7 +29,7 @@ const axiosRequester = axios.create({
 // }
 
 // // Request interceptor: attach Authorization header if we have an access token
-// api.interceptors.request.use(
+// axiosRequester.interceptors.request.use(
 //   (config) => {
 //     const token = store.getState().auth.token;         // Read token from Redux (in-memory)
 //     if (token) config.headers.Authorization = `Bearer ${token}`;
@@ -39,7 +39,7 @@ const axiosRequester = axios.create({
 // );
 
 // // Response interceptor: handle 401 by refreshing once, queueing parallel requests
-// api.interceptors.response.use(
+// axiosRequester.interceptors.response.use(
 //   (response) => response,                              // Pass through successful responses
 //   async (error) => {
 //     const status = error?.response?.status;
@@ -61,15 +61,15 @@ const axiosRequester = axios.create({
 //         if (newToken) {
 //           originalRequest.headers.Authorization = `Bearer ${newToken}`;
 //         }
-//         return api(originalRequest); // Retry with the fresh token
+//         return axiosRequester(originalRequest); // Retry with the fresh token
 //       }
 
 //       // Start a new refresh cycle
 //       isRefreshing = true;
 
 //       // Use raw axios to avoid re-triggering this same interceptor chain
-//       const refreshRes = await axios.post(
-//         `${process.env.NEXT_PUBLIC_API_URL}/auth/refresh`,
+//       const refreshRes = await axiosRequester.post(
+//         `${process.env.NEXT_PUBLIC_BASE_URL}/auth/refresh`,
 //         {},
 //         { withCredentials: true }                       // Required so the HttpOnly refresh cookie is sent
 //       );
@@ -87,7 +87,7 @@ const axiosRequester = axios.create({
 
 //       // Retry the original request with the fresh token
 //       originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
-//       return api(originalRequest);
+//       return axiosRequester(originalRequest);
 //     } catch (err) {
 //       // Refresh failed → flush the queue with error and log the user out
 //       isRefreshing = false;
@@ -97,6 +97,77 @@ const axiosRequester = axios.create({
 //     }
 //   }
 // );
+
+
+/**
+ * Security model:
+ * - Access Token should be passed in config.headers.Authorization
+ * - Refresh Token is stored in HttpOnly cookie
+ * - Queue system avoids multiple refresh calls
+ */
+let isRefreshing = false;
+let pendingQueue = [];
+
+function resolveQueue(error, newToken = null) {
+  pendingQueue.forEach(({ resolve, reject }) => {
+    if (error) reject(error);
+    else resolve(newToken);
+  });
+  pendingQueue = [];
+}
+
+// Request interceptor: attach Authorization header if provided in config
+axiosRequester.interceptors.request.use(
+  (config) => {
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
+// Response interceptor: handle 401 by refreshing once, queueing parallel requests
+axiosRequester.interceptors.response.use(
+  (response) => response,
+  async (error) => {
+    const status = error?.response?.status;
+    const originalRequest = error.config;
+
+    if (status !== 401) return Promise.reject(error);
+    if (originalRequest._retry) return Promise.reject(error);
+    originalRequest._retry = true;
+
+    try {
+      if (isRefreshing) {
+        const newToken = await new Promise((resolve, reject) => {
+          pendingQueue.push({ resolve, reject });
+        });
+        if (newToken) originalRequest.headers.Authorization = `Bearer ${newToken}`;
+        return axiosRequester(originalRequest);
+      }
+
+      isRefreshing = true;
+
+      const refreshRes = await axiosRequester.post(
+        "/auth/refresh",
+        {},
+        { withCredentials: true }
+      );
+
+      const newAccessToken = refreshRes.data?.accessToken;
+      if (!newAccessToken) throw new Error("No accessToken from refresh");
+
+      isRefreshing = false;
+      resolveQueue(null, newAccessToken);
+
+      originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
+      return axiosRequester(originalRequest);
+    } catch (err) {
+      isRefreshing = false;
+      resolveQueue(err, null);
+      return Promise.reject(err);
+    }
+  }
+);
+
 
 
 
