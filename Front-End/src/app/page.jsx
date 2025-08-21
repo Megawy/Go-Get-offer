@@ -3,6 +3,7 @@ import { HoverCardBuilder } from "@/Components/chadcn-ui/hoverCard/hoverCard.jsx
 import Counter from "@/Components/test/page.jsx";
 import UsersList from "@/Components/test2/page";
 import { useFetch } from "@/Hooks/useFetch";
+import store from "@/Redux/store";
 import { Suspense } from "react";
 
 // let usersResourses = useFetch('/users');
@@ -30,7 +31,7 @@ export default function Home() {
 
 
 
-
+console.log(store.getState())
 
 
   return <>
@@ -47,7 +48,11 @@ export default function Home() {
       <UsersList />
     </Suspense> */}
 
-    <HoverCardBuilder content={'this is a hover card !'} title={'GOGETOFFER !'} />
+    <Suspense fallback={<p>Loading Hover Card...</p>}>
+      <UsersList />
+    </Suspense>
+
+    <HoverCardBuilder content={'this is a hover card !'} title={'GO-GETOFFER !'} />
 
   </>
 }

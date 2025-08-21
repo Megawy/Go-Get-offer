@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/Components/navbar/page.jsx";
 import ReduxProvider from "@/Utils/Providers/reduxProvider";
 import ReactQueryProvider from "@/Utils/Providers/reactQueryProvider";
+import AppInitializer from "@/Utils/Providers/appInitializer";
+import RouteGuard from "@/Services/routeGuard";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +27,12 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ReduxProvider>
           <ReactQueryProvider>
+            <AppInitializer>
             <Navbar />
+            <RouteGuard>
             {children}
-
+            </RouteGuard>
+            </AppInitializer>
           </ReactQueryProvider>
         </ReduxProvider>
       </body>

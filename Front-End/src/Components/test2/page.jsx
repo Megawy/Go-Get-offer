@@ -1,14 +1,18 @@
 'use client'
-import { useQueryFetch } from "@/Hooks/useQueryFetch";
+
+import useAuth from "@/Hooks/useAuth";
 
 export default function UsersList() {
-    const { data } = useQueryFetch(["users"], "/users");
+    const { user, token, isAuthenticated, companyName, emailAddress, role } = useAuth();
+
+    console.log("👤 user:", user);
+    console.log("🔑 token:", token);
+    console.log("✅ isAuthenticated:", isAuthenticated);
 
     return (
-        <ul>
-            {data.map(user => (
-                <li key={user.id}>{user.name}</li>
-            ))}
-        </ul>
+        <div>
+            <h1>Hi {companyName || "Guest"}</h1>
+            {isAuthenticated && <p>Welcome back {emailAddress} (role: {role})</p>}
+        </div>
     )
 }
