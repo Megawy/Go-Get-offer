@@ -15,6 +15,7 @@ import { useMutation } from "@tanstack/react-query";
 import axiosRequester from "@/lib/Axios/axios";
 import { jwtDecode } from "jwt-decode";
 import { useRouter } from "next/navigation";
+import { appRoles } from "@/Services/routeGate";
 
 const useAuth = () => {
     const dispatch = useDispatch();
@@ -55,8 +56,31 @@ const useAuth = () => {
                         null,
                 })
             );
-            router.push("/"); // Redirect to home after successful login
-        },
+
+            const roleFromToken =
+                decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
+            if (!roleFromToken || roleFromToken === appRoles.User) {
+                // User has no real role yet → go to role-select
+                router.replace("/role-select");
+                return;
+            }
+
+            if (roleFromToken && roleFromToken !== "User") {
+                switch (roleFromToken) {
+                    case appRoles.Admin:
+                        router.replace("/admin/");
+                        break;
+                    case appRoles.Supplier:
+                        router.replace("/supplier/");
+                        break;
+                    case appRoles.Client:
+                        router.replace("/client/");
+                        break;
+                    default:
+                        router.replace("/");
+                }
+            }
+        }
     });
 
     // ✅ Signup Mutation
@@ -81,6 +105,7 @@ const useAuth = () => {
         onSuccess: () => {
             dispatch(logout());
             router.push("/login");
+            console.log("🟢 Logged out successfully.", logoutMutation);
         },
     });
 

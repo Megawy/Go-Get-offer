@@ -28,8 +28,8 @@ export default function RootLayout({ children }) {
         <ReduxProvider>
           <ReactQueryProvider>
             <AppInitializer>
-            <Navbar />
             <RouteGuard>
+            <Navbar />
             {children}
             </RouteGuard>
             </AppInitializer>

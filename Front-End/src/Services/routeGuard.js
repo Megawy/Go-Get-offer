@@ -1,26 +1,64 @@
-// ✅ RouteGuard.jsx
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import useAuth from "@/Hooks/useAuth";
-import { routesConfig } from "../Services/routeGate"; // نفس اللي عندك
+import { routeGate, appRoles } from "@/Services/routeGate";
 
 const RouteGuard = ({ children }) => {
-    const { isAuthenticated } = useAuth();
+    const { isAuthenticated, role } = useAuth();
     const router = useRouter();
     const pathname = usePathname();
-
-    const currentRoute = routesConfig[pathname];
+    const [checking, setChecking] = useState(true);
 
     useEffect(() => {
-        // لو الصفحة مش موجودة في config اعتبرها Protected by default
-        if (currentRoute?.isProtected !== false && !isAuthenticated) {
-            router.push("/login");
+        // 1️⃣ Public routes → Always accessible
+        if (routeGate.public.includes(pathname)) {
+            setChecking(false);
+            return;
         }
-    }, [isAuthenticated, router, currentRoute]);
 
-    if (currentRoute?.isProtected !== false && !isAuthenticated) {
-        return <p className="text-center mt-10">🔒 Redirecting to login...</p>;
+        // 2️⃣ User not logged in → redirect to login
+        if (!isAuthenticated) {
+            router.replace("/login");
+            setChecking(false);
+            return;
+        }
+
+        // 3️⃣ User with no valid role → must select role
+        if (role === null || role === appRoles.User) {
+            if (pathname !== "/role-select") {
+                router.replace("/role-select");
+            }
+            setChecking(false);
+            return;
+        }
+
+        // 4️⃣ Exceptions (exact paths)
+        const exception = routeGate.exceptions.find((ex) => ex.path === pathname);
+        if (exception) {
+            if (exception.isProtected && !exception.roles.includes(role)) {
+                router.replace("/");
+            }
+            setChecking(false);
+            return;
+        }
+
+        // 5️⃣ Prefix rules (role-based sections)
+        const prefixRule = routeGate.prefixes.find((pr) =>
+            pathname.startsWith(pr.prefix)
+        );
+        if (prefixRule && !prefixRule.roles.includes(role)) {
+            router.replace("/");
+            setChecking(false);
+            return;
+        }
+
+        // 6️⃣ Default: if not matched → protected
+        setChecking(false);
+    }, [isAuthenticated, role, pathname, router]);
+
+    if (checking) {
+        return <p className="text-center mt-10">🔄 Loading...</p>;
     }
 
     return children;

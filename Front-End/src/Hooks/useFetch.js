@@ -1,10 +1,12 @@
+// Hooks/useFetch.js
 import axiosRequester from "@/lib/Axios/axios";
 
+// Suspense wrapper (for GET only)
 function wrapPromise(promise) {
     let status = "pending";
     let result;
 
-    let suspender = promise.then(
+    const suspender = promise.then(
         (res) => {
             status = "success";
             result = res;
@@ -24,17 +26,32 @@ function wrapPromise(promise) {
     };
 }
 
-
-
+/**
+ * useFetch - Flexible data fetcher
+ * - GET requests → Suspense compatible
+ * - POST/PUT/DELETE → Promise (for mutations)
+ */
 export function useFetch(url, options = {}) {
-
     const isAbsolute = /^https?:\/\//i.test(url);
+    const method = (options.method || "GET").toUpperCase();
 
-    const promise = axiosRequester({
+    const request = axiosRequester({
         url,
-        ...(isAbsolute ? { baseURL: '' } : {}),
-        ...options
+        method,
+        ...(isAbsolute ? { baseURL: "" } : {}),
+        ...options,
     }).then((res) => res.data);
+    // console.log("🚀 Axios Request Config:", {
+    //     url: request.url,
+    //     method: request.method,
+    //     headers: request.headers,
+    //     data: request.data,
+    //     params: request.params,
+    // });
 
-    return wrapPromise(promise);
+    if (method === "GET") {
+        return wrapPromise(request);
+    }
+
+    return request; // mutations return normal Promise
 }
