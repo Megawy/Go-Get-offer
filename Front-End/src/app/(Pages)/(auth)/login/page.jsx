@@ -6,8 +6,9 @@ import { loginSchema } from "@/Utils/Validation/ValidationSchemas.js";
 import { RiEyeCloseLine } from "react-icons/ri";
 import { BsEyeFill } from "react-icons/bs";
 import useAuth from "@/Hooks/useAuth.js";
-import { useDispatch } from "react-redux";
-import { setCredentials } from "@/Redux/Slices/authSlice";
+import { getErrorMessage } from "@/Services/errorHandler.js"; // ✅ استدعاء util
+import { Button } from "@/Components/chadcn-ui/button";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
     const initialValues = {
@@ -17,47 +18,33 @@ export default function LoginPage() {
 
     const [showPassword, setShowPassword] = useState(false);
     const [serverError, setServerError] = useState({ email: "", passwordHash: "" });
-
+    const router = useRouter();
     const { login } = useAuth();
-    const dispatch = useDispatch();
 
-const onSubmit = async (values) => {
-    try {
-        setServerError({ email: "", passwordHash: "" });
+    const onSubmit = async (values) => {
+        try {
+            setServerError({ email: "", passwordHash: "" });
 
-        // ⬅️ login بيرجع response.data
-        const data = await login(values);
+            const res = await login(values);
+            console.log("✅ Login success:", res);
 
-        // backend المفروض يديك accessToken
-        const { accessToken, user } = data;  
+        } catch (err) {
+            console.error("❌ Login error:", err);
 
-        dispatch(setCredentials({
-            user: user || null,
-            token: accessToken
-        }));
+            const message = getErrorMessage(err);
 
-        console.log("✅ Login success:", data);
-    } catch (err) {
-        console.error("❌ Login error:", err);
-
-        if (err.response?.status === 400) {
-            setServerError((prev) => ({
-                ...prev,
-                email: err.response?.data?.message || "Invalid email",
-            }));
-        } else if (err.response?.status === 401) {
-            setServerError((prev) => ({
-                ...prev,
-                passwordHash: err.response?.data?.message || "Invalid password",
-            }));
-        } else {
-            setServerError((prev) => ({
-                ...prev,
-                passwordHash: "Something went wrong. Try again later.",
-            }));
+            if (err.response?.status === 400) {
+                setServerError((prev) => ({ ...prev, email: message }));
+            } else if (err.response?.status === 401) {
+                setServerError((prev) => ({ ...prev, passwordHash: message }));
+            } else {
+                setServerError((prev) => ({
+                    ...prev,
+                    passwordHash: message,
+                }));
+            }
         }
-    }
-};
+    };
 
     const formik = useForm(initialValues, loginSchema, onSubmit);
 
@@ -110,11 +97,11 @@ const onSubmit = async (values) => {
                     </span>
                 </div>
 
-                {/* خلي الـ errors بره الـ relative */}
+                {/* Errors */}
                 {formik.errors.passwordHash && formik.touched.passwordHash && (
                     <p className="text-red-500 text-sm">{formik.errors.passwordHash}</p>
                 )}
-                {serverError.password && (
+                {serverError.passwordHash && (
                     <p className="text-red-500 text-sm">{serverError.passwordHash}</p>
                 )}
 
@@ -125,6 +112,10 @@ const onSubmit = async (values) => {
                 >
                     Submit
                 </button>
+                {/* Reset Password Button */}
+                <Button variant="link" type="button" className="text-blue-500 hover:bg-blue-500 hover:text-white p-0" onClick={() => (router.push("/forget-password"))}>
+                    Forgot Password?
+                </Button>
             </form>
         </div>
     );

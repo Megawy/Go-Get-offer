@@ -12,6 +12,10 @@ export const routeGate = {
         "/",
         "/login",
         "/sign-up",
+        "/email-verification-confirmation",
+        "/verify-otp",
+        '/forget-password',
+        '/reset-password',
     ],
 
     prefixes: [

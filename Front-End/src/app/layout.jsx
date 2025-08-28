@@ -1,10 +1,11 @@
 import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
-import Navbar from "@/Components/navbar/page.jsx";
+import Navbar from "@/Components/common/navbar/page.jsx";
 import ReduxProvider from "@/Utils/Providers/reduxProvider";
 import ReactQueryProvider from "@/Utils/Providers/reactQueryProvider";
 import AppInitializer from "@/Utils/Providers/appInitializer";
 import RouteGuard from "@/Services/routeGuard";
+import GlobalModal from "@/Components/chadcn-ui/modal/customizableModal";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,10 +29,11 @@ export default function RootLayout({ children }) {
         <ReduxProvider>
           <ReactQueryProvider>
             <AppInitializer>
-            <RouteGuard>
-            <Navbar />
-            {children}
-            </RouteGuard>
+              <RouteGuard>
+                <Navbar />
+                {children}
+                <GlobalModal />
+              </RouteGuard>
             </AppInitializer>
           </ReactQueryProvider>
         </ReduxProvider>

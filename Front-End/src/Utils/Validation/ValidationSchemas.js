@@ -19,10 +19,11 @@ const passwordRule = Yup.string()
     .required("Password is required");
 
 // ✅ Confirm Password Rule
-const confirmPasswordRule = Yup.string()
-    .trim()
-    .oneOf([Yup.ref("passwordHash"), null], "Passwords must match")
-    .required("Confirm Password is required");
+export const confirmPasswordRule = (refFieldName) =>
+    Yup.string()
+        .trim()
+        .oneOf([Yup.ref(refFieldName), null], "Passwords must match")
+        .required("Confirm Password is required");
 
 // ✅ Company Name Rule
 const companyNameRule = Yup.string()
@@ -34,6 +35,12 @@ const companyNameRule = Yup.string()
 const phoneNumberRule = Yup.string()
     .matches(/^(010|011|012|015)[0-9]{8}$/, "Invalid Egyptian phone number")
     .required("Phone number is required");
+
+// ✅ Otp formula
+const otpRule = Yup.string()
+    .length(6, "OTP must be exactly 6 digits")
+    .matches(/^[0-9]+$/, "OTP must be a number")
+    .required("OTP is required");
 
 // ================================
 // ✅ Schemas
@@ -51,7 +58,25 @@ export const signupSchema = Yup.object({
     phoneNumber: phoneNumberRule,
     companyName: companyNameRule,
     passwordHash: passwordRule,
-    confirmPassword: confirmPasswordRule,
+    confirmPassword: confirmPasswordRule("passwordHash"),
+});
+
+// Reset Password
+export const resetPasswordSchema = Yup.object({
+    email: emailRule,
+    NewPassword: passwordRule,
+    confirmPassword: confirmPasswordRule("NewPassword"),
+    Otp: otpRule,
+});
+
+// Forgot Password
+export const forgetPasswordSchema = Yup.object({
+    email: emailRule,
+});
+
+// OTP Verification
+export const otpVerificationSchema = Yup.object({
+    Otp: otpRule,
 });
 
 // Export rules separately if needed
@@ -60,4 +85,5 @@ export const rules = {
     passwordRule,
     companyNameRule,
     phoneNumberRule,
+    otpRule,
 };

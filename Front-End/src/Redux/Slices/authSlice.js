@@ -9,6 +9,7 @@ const initialState = {
     emailAddress: null,
     phoneNumber: null,
     role: null,
+    isEmailConfirmed: null,
 };
 
 const authSlice = createSlice({
@@ -16,7 +17,7 @@ const authSlice = createSlice({
     initialState,
     reducers: {
         setCredentials: (state, action) => {
-            const { token, user, companyName, emailAddress, phoneNumber, role } = action.payload;
+            const { token, user, companyName, emailAddress, phoneNumber, role, isEmailConfirmed } = action.payload;
 
             state.token = token ?? state.token;
             state.user = user ?? state.user;
@@ -25,6 +26,10 @@ const authSlice = createSlice({
             state.emailAddress = emailAddress ?? state.emailAddress;
             state.phoneNumber = phoneNumber ?? state.phoneNumber;
             state.role = role ?? state.role;
+            state.isEmailConfirmed = isEmailConfirmed ?? state.isEmailConfirmed;
+        },
+        setIsEmailConfirmed: (state, action) => {
+            state.isEmailConfirmed = action.payload;
         },
         logout: (state) => {
             state.user = null;
@@ -34,11 +39,18 @@ const authSlice = createSlice({
             state.emailAddress = null;
             state.phoneNumber = null;
             state.role = null;
+            state.isEmailConfirmed = null;
+        },
+        setResetEmail: (state, action) => {  
+            state.resetEmail = action.payload;
+        },
+        clearResetEmail: (state) => {
+            state.resetEmail = null;
         },
     },
 });
 
-export const { setCredentials, logout } = authSlice.actions;
+export const { setCredentials, logout, setIsEmailConfirmed, setResetEmail, clearResetEmail } = authSlice.actions;
 export const authReducer = authSlice.reducer;
 
 // Selectors
@@ -49,3 +61,5 @@ export const selectCurrentCompanyName = (state) => state.auth.companyName;
 export const selectCurrentEmailAddress = (state) => state.auth.emailAddress;
 export const selectCurrentPhoneNumber = (state) => state.auth.phoneNumber;
 export const selectCurrentRole = (state) => state.auth.role;
+export const selectIsEmailConfirmed = (state) => state.auth.isEmailConfirmed;
+export const selectResetEmail = (state) => state.auth.resetEmail;

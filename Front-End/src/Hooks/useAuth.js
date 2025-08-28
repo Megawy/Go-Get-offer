@@ -39,48 +39,55 @@ const useAuth = () => {
             return res.data;
         },
         onSuccess: (data) => {
-            const accessToken = data?.data?.accessToken;
-            if (!accessToken) return;
+    const accessToken = data?.data?.accessToken;
+    if (!accessToken) return;
 
-            const decoded = jwtDecode(accessToken);
+    const decoded = jwtDecode(accessToken);
 
-            dispatch(
-                setCredentials({
-                    token: accessToken,
-                    user: decoded.user || null,
-                    companyName: decoded.companyName || null,
-                    emailAddress: decoded.emailAddress || null,
-                    phoneNumber: decoded.phoneNumber || null,
-                    role:
-                        decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"] ||
-                        null,
-                })
-            );
+    dispatch(
+        setCredentials({
+            token: accessToken,
+            user: decoded.user || null,
+            companyName: decoded.companyName || null,
+            emailAddress: decoded.emailAddress || null,
+            phoneNumber: decoded.phoneNumber || null,
+            role:
+                decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"] ||
+                null,
+            isEmailConfirmed: decoded.isEmailConfirmed ?? null,
+        })
+    );
 
-            const roleFromToken =
-                decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
-            if (!roleFromToken || roleFromToken === appRoles.User) {
-                // User has no real role yet → go to role-select
-                router.replace("/role-select");
-                return;
-            }
+    const roleFromToken =
+        decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
+    const isEmailConfirmed = decoded.isEmailConfirmed;
 
-            if (roleFromToken && roleFromToken !== "User") {
-                switch (roleFromToken) {
-                    case appRoles.Admin:
-                        router.replace("/admin/");
-                        break;
-                    case appRoles.Supplier:
-                        router.replace("/supplier/");
-                        break;
-                    case appRoles.Client:
-                        router.replace("/client/");
-                        break;
-                    default:
-                        router.replace("/");
-                }
-            }
+    if (!roleFromToken || roleFromToken === appRoles.User) {
+        if (!isEmailConfirmed) {
+            router.replace("/email-verification-confirmation");
+        } else {
+            router.replace("/role-select");
         }
+        return;
+    }
+
+    if (roleFromToken && roleFromToken !== "User") {
+        switch (roleFromToken) {
+            case appRoles.Admin:
+                router.replace("/admin/");
+                break;
+            case appRoles.Supplier:
+                router.replace("/supplier/");
+                break;
+            case appRoles.Client:
+                router.replace("/client/");
+                break;
+            default:
+                router.replace("/");
+        }
+    }
+}
+
     });
 
     // ✅ Signup Mutation
@@ -91,9 +98,27 @@ const useAuth = () => {
             });
             return res.data;
         },
-        onSuccess: () => {
-            router.push("/login");
-            console.log("🟢 Signup Success. Please login to continue.");
+        onSuccess: (data) => {
+            const accessToken = data?.data?.accessToken;
+            if (!accessToken) return;
+
+            const decoded = jwtDecode(accessToken);
+            console.log("Decoded Token after Signup:", decoded);
+            dispatch(
+                setCredentials({
+                    token: accessToken,
+                    user: decoded.user || null,
+                    companyName: decoded.companyName || null,
+                    emailAddress: decoded.emailAddress || null,
+                    phoneNumber: decoded.phoneNumber || null,
+                    role:
+                        decoded["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"] ||
+                        null,
+                    isEmailConfirmed: decoded.isEmailConfirmed ?? null,
+                })
+            );
+            router.push("/email-verification-confirmation");
+            console.log("🟢 Signup Success. User is now logged in, redirecting to email verification confirmation.");
         },
     });
 

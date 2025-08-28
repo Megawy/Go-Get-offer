@@ -50,7 +50,7 @@ const AppInitializer = ({ children }) => {
             } catch (error) {
                 console.log("❌ Rehydration failed:", error.response?.data || error.message);
                 dispatch(logout());
-                router.push("/login");
+                // router.push("/login");
             } finally {
                 setLoading(false);
             }

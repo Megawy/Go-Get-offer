@@ -33,14 +33,14 @@ export default function useForm(initialValues, validationSchema, onSubmit) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-         console.log("🔥 handleSubmit triggered");
+        console.log("🔥 handleSubmit triggered");
         try {
             await validationSchema.validate(values, { abortEarly: false });
             setErrors({});
             console.log("✅ Validation Passed:", values);
-            onSubmit(values); 
+            onSubmit(values);
         } catch (err) {
-             console.error("❌ Validation Error (Full):", err);
+            console.error("❌ Validation Error (Full):", err);
             const newErrors = {};
             err.inner.forEach((error) => {
                 newErrors[error.path] = error.message;
@@ -69,5 +69,6 @@ export default function useForm(initialValues, validationSchema, onSubmit) {
         handleBlur,
         handleSubmit,
         resetForm,
+        setErrors
     };
 }

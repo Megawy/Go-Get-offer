@@ -2,10 +2,11 @@
 
 import { useState } from "react";
 import useForm from "@/Hooks/useForm.js";
-import { signupSchema } from "@/Utils/Validation/ValidationSchemas.js";
+import { signupSchema} from "@/Utils/Validation/ValidationSchemas.js";
 import { RiEyeCloseLine } from "react-icons/ri";
 import { BsEyeFill } from "react-icons/bs";
 import useAuth from "@/Hooks/useAuth.js";
+import { normalizeErrors } from "@/Services/errorNormalizer";
 
 export default function SignupPage() {
     const initialValues = {
@@ -13,60 +14,24 @@ export default function SignupPage() {
         phoneNumber: "",
         companyName: "",
         passwordHash: "",
-        confirmPassword: "", // 🆕 أضفنا confirmPassword
+        confirmPassword: "",
     };
 
     const [showPassword, setShowPassword] = useState(false);
-    const [showConfirmPassword, setShowConfirmPassword] = useState(false); // 🆕 زر إظهار/إخفاء confirmPassword
-    const [serverError, setServerError] = useState({
-        email: "",
-        phoneNumber: "",
-        companyName: "",
-        passwordHash: "",
-        confirmPassword: "",
-    });
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-    const { signup } = useAuth();
+    const { signup, signupError, signupLoading } = useAuth();
 
     const onSubmit = async (values) => {
         const { confirmPassword, ...payload } = values;
-        try {
-            setServerError({
-                email: "",
-                phoneNumber: "",
-                companyName: "",
-                passwordHash: "",
-                confirmPassword: "",
-            });
-
-            console.log("🚀 Signup Submit Triggered:", values);
-            await signup(payload);
-
-            console.log("✅ Signup success:", values);
-        } catch (err) {
-            console.error("❌ Signup error:", err);
-
-            if (err.response?.status === 400) {
-                setServerError((prev) => ({
-                    ...prev,
-                    email: err.response?.data?.message || "Invalid email",
-                }));
-            } else if (err.response?.status === 401) {
-                setServerError((prev) => ({
-                    ...prev,
-                    passwordHash: err.response?.data?.message || "Invalid password",
-                }));
-            } else {
-                setServerError((prev) => ({
-                    ...prev,
-                    passwordHash: "Something went wrong. Try again later.",
-                }));
-            }
-        }
+        await signup(payload); // ✅ useAuth بيتكفل بالـ dispatch + token + redirect
     };
 
     const { values, errors, touched, handleChange, handleBlur, handleSubmit } =
         useForm(initialValues, signupSchema, onSubmit);
+
+    // 🛠️ Normalize server errors
+    const serverErrors = normalizeErrors(signupError);
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen">
@@ -89,8 +54,8 @@ export default function SignupPage() {
                     {errors.email && touched.email && (
                         <p className="text-red-500 text-sm">{errors.email}</p>
                     )}
-                    {serverError.email && (
-                        <p className="text-red-500 text-sm">{serverError.email}</p>
+                    {serverErrors.email && (
+                        <p className="text-red-500 text-sm">{serverErrors.email}</p>
                     )}
                 </div>
 
@@ -108,8 +73,8 @@ export default function SignupPage() {
                     {errors.phoneNumber && touched.phoneNumber && (
                         <p className="text-red-500 text-sm">{errors.phoneNumber}</p>
                     )}
-                    {serverError.phoneNumber && (
-                        <p className="text-red-500 text-sm">{serverError.phoneNumber}</p>
+                    {serverErrors.phoneNumber && (
+                        <p className="text-red-500 text-sm">{serverErrors.phoneNumber}</p>
                     )}
                 </div>
 
@@ -127,8 +92,8 @@ export default function SignupPage() {
                     {errors.companyName && touched.companyName && (
                         <p className="text-red-500 text-sm">{errors.companyName}</p>
                     )}
-                    {serverError.companyName && (
-                        <p className="text-red-500 text-sm">{serverError.companyName}</p>
+                    {serverErrors.companyName && (
+                        <p className="text-red-500 text-sm">{serverErrors.companyName}</p>
                     )}
                 </div>
 
@@ -153,11 +118,11 @@ export default function SignupPage() {
                 {errors.passwordHash && touched.passwordHash && (
                     <p className="text-red-500 text-sm">{errors.passwordHash}</p>
                 )}
-                {serverError.passwordHash && (
-                    <p className="text-red-500 text-sm">{serverError.passwordHash}</p>
+                {serverErrors.passwordHash && (
+                    <p className="text-red-500 text-sm">{serverErrors.passwordHash}</p>
                 )}
 
-                {/* Confirm Password 🆕 */}
+                {/* Confirm Password */}
                 <div className="relative">
                     <input
                         type={showConfirmPassword ? "text" : "password"}
@@ -182,13 +147,19 @@ export default function SignupPage() {
                 {errors.confirmPassword && touched.confirmPassword && (
                     <p className="text-red-500 text-sm">{errors.confirmPassword}</p>
                 )}
-                {serverError.confirmPassword && (
-                    <p className="text-red-500 text-sm">{serverError.confirmPassword}</p>
+
+                {/* General Error */}
+                {serverErrors.general && (
+                    <p className="text-red-500 text-sm text-center">{serverErrors.general}</p>
                 )}
 
                 {/* Submit */}
-                <button type="submit" className="bg-blue-600 text-white p-2 rounded">
-                    Sign Up
+                <button
+                    type="submit"
+                    disabled={signupLoading}
+                    className="bg-blue-600 text-white p-2 rounded disabled:opacity-50"
+                >
+                    {signupLoading ? "Loading..." : "Sign Up"}
                 </button>
             </form>
         </div>

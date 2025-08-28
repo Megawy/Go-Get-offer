@@ -76,10 +76,10 @@ axiosRequester.interceptors.response.use(
           { withCredentials: true }
         );
 
-        const newAccessToken = data.accessToken;
+        const newAccessToken = data?.accessToken || data?.data?.accessToken;
+
         if (!newAccessToken) throw new Error("No access token returned");
 
-        // ✅ Update redux state (token فقط، باقي البيانات AppInitializer بيعملها)
         store.dispatch(setCredentials({ token: newAccessToken }));
 
         // ✅ Update axios default Authorization header
