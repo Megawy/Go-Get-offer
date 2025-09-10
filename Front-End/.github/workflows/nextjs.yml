@@ -18,6 +18,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Front-end # 👈 كل الـ steps هتشتغل من فولدر Front-end
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,32 +32,16 @@ jobs:
           node-version: "20"
           cache: npm
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: next
-
-      - name: Restore cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            Front-end/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('Front-end/package-lock.json') }}-${{ hashFiles('Front-end/**/*.[jt]s', 'Front-end/**/*.[jt]sx') }}
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('Front-end/package-lock.json') }}-
-
       - name: Install dependencies
-        working-directory: Front-end
-        run: npm ci
+        run: npm install
 
       - name: Build with Next.js
-        working-directory: Front-end
-        run: npx next build
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: Front-end/out
+          path: Front-end/out # 👈 مسار output بعد build
 
   deploy:
     environment:
