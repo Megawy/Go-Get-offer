@@ -1,0 +1,36 @@
+[
+    {
+        "title": "What Go-GetOffer brings you as",
+        "badge": "Suppliers",
+        "subtitle": "We provide suppliers with end-to-end supply chain solutions and intelligence tools to predict, monitor, and control strategies in real time.",
+        "content": [
+            "Real-Time Insights",
+            "Showcase Products",
+            "Set Prices Your Way",
+            "Reach More Customers"
+        ],
+        "sub-content": [
+            "Real-time insights for reliable performance.",
+            "Effortlessly upload and present your offerings.",
+            "Stay transparent and in control of pricing.",
+            "Expand visibility and grow your sales."
+        ]
+    },
+    {
+        "title": "What Go-GetOffer brings you as",
+        "badge": "Business Clients",
+        "subtitle": "We empower businesses with seamless sourcing, real-time insights, and smart tools to compare, choose, and manage supplies with ease and confidence.",
+        "content": [
+            "Compare Prices",
+            "Shop Seamlessly",
+            "Easier Access",
+            "Save Time & Money"
+        ],
+        "sub-content": [
+            "Instantly view options from multiple suppliers.",
+            "Enjoy a smooth and simple buying process.",
+            "Choose supplies for faster deals.",
+            "Get better deals with less effort."
+        ]
+    }
+]

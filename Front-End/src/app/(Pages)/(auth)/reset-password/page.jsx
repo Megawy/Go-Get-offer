@@ -34,7 +34,7 @@ export default function ResetPasswordPage() {
                 method: "POST",
                 data: {
                     email: values.email,
-                    ResetCode: values.Otp,        // <-- API expects ResetCode
+                    ResetCode: values.Otp,
                     NewPassword: values.NewPassword,
                 },
             });
@@ -44,7 +44,7 @@ export default function ResetPasswordPage() {
                     type: "success",
                     title: "Success",
                     message: "Password reset successfully!",
-                    actionType: ModalActions.LOGIN, // GlobalModal will route on OK
+                    actionType: ModalActions.LOGIN,
                 });
             } else {
                 openModal({

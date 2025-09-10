@@ -9,6 +9,7 @@ import {
     selectCurrentEmailAddress,
     selectCurrentPhoneNumber,
     selectCurrentRole,
+    selectIsEmailConfirmed,
 } from "@/Redux/Slices/authSlice";
 import { useCallback } from "react";
 import { useMutation } from "@tanstack/react-query";
@@ -29,6 +30,7 @@ const useAuth = () => {
     const emailAddress = useSelector(selectCurrentEmailAddress);
     const phoneNumber = useSelector(selectCurrentPhoneNumber);
     const role = useSelector(selectCurrentRole);
+    const isEmailConfirmed = useSelector(selectIsEmailConfirmed);
 
     // ✅ Login Mutation
     const loginMutation = useMutation({
@@ -157,6 +159,7 @@ const useAuth = () => {
         emailAddress,
         phoneNumber,
         role,
+        isEmailConfirmed,
 
         login,
         signup,

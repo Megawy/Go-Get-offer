@@ -1,15 +1,24 @@
-'use client'
+import Counter from '@/Components/test/page';
+import { staticPageMetadata } from '@/Utils/SEO/seo';
 import React from 'react'
-import { useSelector } from "react-redux"
 
-const About = () => {
-  let {counter} = useSelector((state) => state.counter)
-
-  return <>
-  <h1>About Page!</h1>
-      <h2>Count : {counter} </h2>
-
-  </>
+export async function generateMetadata() {
+  return await staticPageMetadata({
+    title: { en: "About Us", ar: "معلومات عنا" },
+    description: {
+      en: "Learn more about our company and mission.",
+      ar: "تعرف على المزيد عن شركتنا ورسالتنا.",
+    },
+  });
 }
 
-export default About
+export default function AboutPage() {
+  return <>
+  
+    <h1>About Page!</h1>
+    <Counter />
+
+  </>
+
+}
+

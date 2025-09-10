@@ -5,7 +5,7 @@ import useAuth from "@/Hooks/useAuth";
 import { routeGate, appRoles } from "@/Services/routeGate";
 
 const RouteGuard = ({ children }) => {
-    const { isAuthenticated, role } = useAuth();
+    const { isAuthenticated, role, isEmailConfirmed} = useAuth();
     const router = useRouter();
     const pathname = usePathname();
     const [checking, setChecking] = useState(true);
@@ -26,7 +26,9 @@ const RouteGuard = ({ children }) => {
 
         // 3️⃣ User with no valid role → must select role
         if (role === null || role === appRoles.User) {
-            if (pathname !== "/role-select") {
+            if (!isEmailConfirmed) {
+                router.replace("/email-verification-confirmation");
+            } else if (pathname !== "/role-select") {
                 router.replace("/role-select");
             }
             setChecking(false);

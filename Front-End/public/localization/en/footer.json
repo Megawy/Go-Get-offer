@@ -1,0 +1,37 @@
+{
+    "sections": [
+        {
+            "title": "Explore",
+            "items": [
+                "Welcome",
+                "Approach",
+                "Join us",
+                "Features",
+                "Blogs"
+            ]
+        },
+        {
+            "title": "Sign up",
+            "items": [
+                "Suppliers",
+                "Customers"
+            ]
+        },
+        {
+            "title": "Help & Support",
+            "items": [
+                "Terms and conditions",
+                "Privacy Policy"
+            ]
+        },
+        {
+            "title": "Contact us",
+            "items": [
+                "Maadi Al Khabiri Al Gharbeyah, Maadi, Cairo Governorate, Egypt",
+                "info@getoffergroup.com",
+                "01018188418 - 01022270220"
+            ]
+        }
+    ],
+    "rights": "© GoGetOffer {{year}}, All rights reserved"
+}

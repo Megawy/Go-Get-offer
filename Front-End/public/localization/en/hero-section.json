@@ -1,0 +1,20 @@
+{
+    "title": { 
+        "desktop": "Find Trusted Suppliers. Reach the right customers. \nGrow Together",
+        "tablet": "Find Trusted Suppliers. \nReach the right customers. \nGrow Together",
+        "mobile": "Find Trusted Suppliers. \nReach the right customers. \nGrow Together"
+    },
+    "subtitle": "At Go-GetOffer, we connect suppliers with customers, making it easy to source, sell, and grow your business.",
+    "buttons": [
+        "Join Us",
+        "Contact us"
+    ],
+    "supplies_range": [
+        "Buffet",
+        "Food Products",
+        "Office Supplies",
+        "Packaging Materials",
+        "Cleaning Supplies",
+        "Medical Supplies"
+    ]
+}

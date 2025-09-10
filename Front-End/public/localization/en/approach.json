@@ -1,0 +1,21 @@
+{
+        "title": "Go-GetOffer Approach",
+        "steps": [
+            {
+                "title": "Sign up as a supplier or client",
+                "content": "Create your free account to showcase your products as a supplier or browse listings as a client."
+            },
+            {
+                "title": "Search or list products",
+                "content": "Suppliers can add product details, images, and pricing, while clients browse and filter by category, location, or specifications."
+            },
+            {
+                "title": "Connect & negotiate easily",
+                "content": "Communicate in real time to discuss requirements and finalize terms directly."
+            },
+            {
+                "title": "Close the deal securely",
+                "content": "Finalize agreements confidently with Go-GetOffer, protecting both buyers and suppliers."
+            }
+        ]
+}

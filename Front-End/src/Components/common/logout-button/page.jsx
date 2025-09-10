@@ -8,7 +8,7 @@ const LogoutButton = () => {
         <button
             onClick={logout}
             disabled={logoutLoading}
-            className="px-4 py-2 bg-red-500 text-white rounded"
+            className="px-4 py-2 bg-go-primary-g f text-go-primary-o rounded"
         >
             {logoutLoading ? "Logging out..." : "Logout"}
         </button>
