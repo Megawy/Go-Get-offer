@@ -15,7 +15,7 @@ import Footer from "@/Components/common/footer/page";
 // const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 const figtreeRegular = localFont({
-  src: "../fonts/figtree-regular.ttf",
+  src: "../fonts/Figtree-Regular.ttf",
   variable: "--font-figtree",
   display: "swap",
 });
