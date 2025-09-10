@@ -25,12 +25,12 @@ jobs:
       - name: Detect package manager
         id: detect-package-manager
         run: |
-          if [ -f "${{ github.workspace }}/Front-end/yarn.lock" ]; then
+          if [ -f "${{ github.workspace }}/Front-End/yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
             echo "runner=yarn" >> $GITHUB_OUTPUT
             exit 0
-          elif [ -f "${{ github.workspace }}/Front-end/package.json" ]; then
+          elif [ -f "${{ github.workspace }}/Front-End/package.json" ]; then
             echo "manager=npm" >> $GITHUB_OUTPUT
             echo "command=ci" >> $GITHUB_OUTPUT
             echo "runner=npx --no-install" >> $GITHUB_OUTPUT
@@ -55,23 +55,23 @@ jobs:
         uses: actions/cache@v4
         with:
           path: |
-            Front-end/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('Front-end/package-lock.json', 'Front-end/yarn.lock') }}-${{ hashFiles('Front-end/**/*.[jt]s', 'Front-end/**/*.[jt]sx') }}
+            Front-End/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('Front-End/package-lock.json', 'Front-End/yarn.lock') }}-${{ hashFiles('Front-End/**/*.[jt]s', 'Front-End/**/*.[jt]sx') }}
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('Front-end/package-lock.json', 'Front-end/yarn.lock') }}-
+            ${{ runner.os }}-nextjs-${{ hashFiles('Front-End/package-lock.json', 'Front-End/yarn.lock') }}-
 
       - name: Install dependencies
-        working-directory: Front-end
+        working-directory: Front-End
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
       - name: Build with Next.js
-        working-directory: Front-end
+        working-directory: Front-End
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: Front-end/out
+          path: Front-End/out
 
   deploy:
     environment:
