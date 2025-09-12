@@ -1,0 +1,110 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/supplier/branch/all",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier/branch/all",
+      "UpstreamHttpMethod": [ "GET", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "Limit": 10
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplier/branch/code",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier/branch/code",
+      "UpstreamHttpMethod": [ "GET", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "Limit": 10
+      }
+    },
+
+
+    {
+      "DownstreamPathTemplate": "/api/supplier/branch",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier/branch",
+      "UpstreamHttpMethod": [ "GET", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "Limit": 10
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/supplier/branch/Create",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier/branch/Create",
+      "UpstreamHttpMethod": [ "POST", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "Limit": 10
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/supplier/branch/Edit",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier/branch/Edit",
+      "UpstreamHttpMethod": [ "PUT", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "Limit": 10
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplier/branch/Delete",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier/branch/Delete",
+      "UpstreamHttpMethod": [ "DELETE", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "Limit": 10
+      }
+    }
+  ]
+}

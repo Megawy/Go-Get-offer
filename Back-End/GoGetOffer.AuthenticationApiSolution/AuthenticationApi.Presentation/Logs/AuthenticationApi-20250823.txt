@@ -1,0 +1,44 @@
+2025-08-23 09:19:26.119 +03:00 [INF] Invalid object name 'AuthenticationUserUpdateRequests'.
+2025-08-23 09:19:26.145 +03:00 [WRN] Invalid object name 'AuthenticationUserUpdateRequests'.
+2025-08-23 11:57:29.971 +03:00 [INF] Could not find file 'C:\Users\Mega_\source\repos\GoGetOffer\GoGetOffer.AuthenticationApiSolution\AuthenticationApi.Presentation\6ee213fff8e03a6352a62b72af2b48302b9c4a75.jpeg'.
+2025-08-23 11:57:29.996 +03:00 [WRN] Could not find file 'C:\Users\Mega_\source\repos\GoGetOffer\GoGetOffer.AuthenticationApiSolution\AuthenticationApi.Presentation\6ee213fff8e03a6352a62b72af2b48302b9c4a75.jpeg'.
+2025-08-23 11:58:56.493 +03:00 [INF] Could not find file 'C:\Users\Mega_\source\repos\GoGetOffer\GoGetOffer.AuthenticationApiSolution\AuthenticationApi.Presentation\6ee213fff8e03a6352a62b72af2b48302b9c4a75.jpeg'.
+2025-08-23 11:58:56.496 +03:00 [WRN] Could not find file 'C:\Users\Mega_\source\repos\GoGetOffer\GoGetOffer.AuthenticationApiSolution\AuthenticationApi.Presentation\6ee213fff8e03a6352a62b72af2b48302b9c4a75.jpeg'.
+2025-08-23 12:19:02.334 +03:00 [INF] Could not find file 'C:\Users\Mega_\source\repos\GoGetOffer\GoGetOffer.AuthenticationApiSolution\AuthenticationApi.Presentation\6ee213fff8e03a6352a62b72af2b48302b9c4a75.jpeg'.
+2025-08-23 12:19:02.362 +03:00 [WRN] Could not find file 'C:\Users\Mega_\source\repos\GoGetOffer\GoGetOffer.AuthenticationApiSolution\AuthenticationApi.Presentation\6ee213fff8e03a6352a62b72af2b48302b9c4a75.jpeg'.
+2025-08-23 12:26:44.992 +03:00 [INF] Could not find file 'C:\Users\Mega_\source\repos\GoGetOffer\GoGetOffer.AuthenticationApiSolution\AuthenticationApi.Presentation\6ee213fff8e03a6352a62b72af2b48302b9c4a75.jpeg'.
+2025-08-23 12:26:45.019 +03:00 [WRN] Could not find file 'C:\Users\Mega_\source\repos\GoGetOffer\GoGetOffer.AuthenticationApiSolution\AuthenticationApi.Presentation\6ee213fff8e03a6352a62b72af2b48302b9c4a75.jpeg'.
+2025-08-23 12:29:34.659 +03:00 [INF] Could not find file 'C:\Users\Mega_\source\repos\GoGetOffer\GoGetOffer.AuthenticationApiSolution\AuthenticationApi.Presentation\6ee213fff8e03a6352a62b72af2b48302b9c4a75.jpeg'.
+2025-08-23 12:29:34.690 +03:00 [WRN] Could not find file 'C:\Users\Mega_\source\repos\GoGetOffer\GoGetOffer.AuthenticationApiSolution\AuthenticationApi.Presentation\6ee213fff8e03a6352a62b72af2b48302b9c4a75.jpeg'.
+2025-08-23 12:29:34.713 +03:00 [INF] Could not find file 'C:\Users\Mega_\source\repos\GoGetOffer\GoGetOffer.AuthenticationApiSolution\AuthenticationApi.Presentation\6ee213fff8e03a6352a62b72af2b48302b9c4a75.jpeg'.
+2025-08-23 12:29:34.716 +03:00 [WRN] Could not find file 'C:\Users\Mega_\source\repos\GoGetOffer\GoGetOffer.AuthenticationApiSolution\AuthenticationApi.Presentation\6ee213fff8e03a6352a62b72af2b48302b9c4a75.jpeg'.
+2025-08-23 12:29:34.736 +03:00 [INF] Could not find file 'C:\Users\Mega_\source\repos\GoGetOffer\GoGetOffer.AuthenticationApiSolution\AuthenticationApi.Presentation\2018-mass-effect-andromeda-5k-i4-1920x1080.jpg'.
+2025-08-23 12:29:34.739 +03:00 [WRN] Could not find file 'C:\Users\Mega_\source\repos\GoGetOffer\GoGetOffer.AuthenticationApiSolution\AuthenticationApi.Presentation\2018-mass-effect-andromeda-5k-i4-1920x1080.jpg'.
+2025-08-23 18:45:30.413 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-23 18:45:30.441 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-23 18:48:07.505 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-23 18:48:07.508 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-23 19:44:31.755 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-23 19:44:31.758 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-23 19:44:40.415 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-23 19:44:40.417 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-23 19:47:42.192 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-23 19:47:42.194 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-23 21:05:34.852 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-23 21:05:34.854 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-23 21:06:04.530 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-23 21:06:04.532 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-23 21:06:07.523 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-23 21:06:07.525 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-23 21:11:51.673 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-23 21:11:51.675 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-23 21:13:52.815 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-23 21:13:52.818 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-23 21:14:05.206 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-23 21:14:05.208 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-23 21:15:51.361 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-23 21:15:51.364 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-23 21:16:03.543 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-23 21:16:03.546 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-23 21:22:23.055 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-23 21:22:23.058 +03:00 [WRN] Value cannot be null. (Parameter 's')

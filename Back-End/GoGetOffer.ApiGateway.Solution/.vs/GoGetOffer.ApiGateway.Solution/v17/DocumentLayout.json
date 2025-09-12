@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Mega_\\source\\repos\\GoGetOffer\\GoGetOffer.ApiGateway.Solution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{53627702-A701-4B15-B4EF-DBF2E62EFBF5}|GoGetOffer.ApiGateway.Solution\\GoGetOffer.ApiGateway.Solution.csproj|c:\\users\\mega_\\source\\repos\\gogetoffer\\gogetoffer.apigateway.solution\\gogetoffer.apigateway.solution\\productapi\\category\\ocelot.category.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{53627702-A701-4B15-B4EF-DBF2E62EFBF5}|GoGetOffer.ApiGateway.Solution\\GoGetOffer.ApiGateway.Solution.csproj|solutionrelative:gogetoffer.apigateway.solution\\productapi\\category\\ocelot.category.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ocelot.category.json",
+              "DocumentMoniker": "C:\\Users\\Mega_\\source\\repos\\GoGetOffer\\GoGetOffer.ApiGateway.Solution\\GoGetOffer.ApiGateway.Solution\\ProductApi\\Category\\ocelot.category.json",
+              "RelativeDocumentMoniker": "GoGetOffer.ApiGateway.Solution\\ProductApi\\Category\\ocelot.category.json",
+              "ToolTip": "C:\\Users\\Mega_\\source\\repos\\GoGetOffer\\GoGetOffer.ApiGateway.Solution\\GoGetOffer.ApiGateway.Solution\\ProductApi\\Category\\ocelot.category.json",
+              "RelativeToolTip": "GoGetOffer.ApiGateway.Solution\\ProductApi\\Category\\ocelot.category.json",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-10T07:15:14.979Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

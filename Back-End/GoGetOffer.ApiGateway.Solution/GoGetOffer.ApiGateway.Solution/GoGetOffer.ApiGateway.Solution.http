@@ -1,0 +1,6 @@
+@GoGetOffer.ApiGateway.Solution_HostAddress = http://localhost:5207
+
+GET {{GoGetOffer.ApiGateway.Solution_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

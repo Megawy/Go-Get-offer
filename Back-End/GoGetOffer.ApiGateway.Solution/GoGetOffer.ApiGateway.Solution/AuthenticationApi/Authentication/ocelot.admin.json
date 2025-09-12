@@ -1,0 +1,105 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/admin/profile/delete",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/admin/profile/delete",
+      "UpstreamHttpMethod": [ "DELETE", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/admin/profile/undelete",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/admin/profile/undelete",
+      "UpstreamHttpMethod": [ "PUT", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/admin/profile/ban",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/admin/profile/ban",
+      "UpstreamHttpMethod": [ "PUT", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/admin/profile/unban",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/admin/profile/unban",
+      "UpstreamHttpMethod": [ "PUT", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/admin/profile/update",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/admin/profile/update",
+      "UpstreamHttpMethod": [ "GET", "PUT", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/admin/profile/update-id",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/admin/profile/update-id",
+      "UpstreamHttpMethod": [ "GET", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/admin/users",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/admin/users",
+      "UpstreamHttpMethod": [ "GET", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/admin/profile/role-change",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/admin/profile/role-change",
+      "UpstreamHttpMethod": [ "PUT", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    }
+  ]
+}

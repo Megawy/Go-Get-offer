@@ -1,0 +1,52 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/category/create",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/category/create",
+      "UpstreamHttpMethod": [ "POST", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/category/bulk",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/category/bulk",
+      "UpstreamHttpMethod": [ "POST", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/category/id",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/category/id",
+      "UpstreamHttpMethod": [ "GET", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/category/",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/category/",
+      "UpstreamHttpMethod": [ "GET", "DELETE", "PUT", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5002
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+2025-09-03 14:13:10.375 +03:00 [INF] Token has expired.
+2025-09-03 14:13:10.407 +03:00 [WRN] Token has expired.
+2025-09-03 15:10:28.966 +03:00 [INF] Token has expired.
+2025-09-03 15:10:28.970 +03:00 [WRN] Token has expired.
+2025-09-03 15:19:13.096 +03:00 [INF] Token has expired.
+2025-09-03 15:19:13.128 +03:00 [WRN] Token has expired.
+2025-09-03 17:06:07.076 +03:00 [INF] The JSON value could not be converted to System.String. Path: $.status | LineNumber: 2 | BytePositionInLine: 13.
+2025-09-03 17:06:07.108 +03:00 [WRN] The JSON value could not be converted to System.String. Path: $.status | LineNumber: 2 | BytePositionInLine: 13.

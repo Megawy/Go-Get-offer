@@ -1,0 +1,89 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/supplier",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier",
+      "UpstreamHttpMethod": [ "GET", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "Limit": 7
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplier/register",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier/register",
+      "UpstreamHttpMethod": [ "POST", "PUT", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "Limit": 3
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplier/code",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier/code",
+      "UpstreamHttpMethod": [ "GET", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "Limit": 5
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplier/state",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier/state",
+      "UpstreamHttpMethod": [ "GET", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "Limit": 5
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplier/data",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier/data",
+      "UpstreamHttpMethod": [ "PUT", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "Limit": 3
+      }
+    }
+  ]
+}

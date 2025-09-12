@@ -1,0 +1,156 @@
+2025-08-25 15:37:36.087 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 15:37:36.110 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 15:57:33.615 +03:00 [INF] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 12:54:08 م', Current time (UTC): '25/08/2025 12:57:33 م'.
+2025-08-25 15:57:33.619 +03:00 [WRN] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 12:54:08 م', Current time (UTC): '25/08/2025 12:57:33 م'.
+2025-08-25 15:57:33.647 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 15:57:33.650 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 16:02:44.650 +03:00 [INF] Timeout awaiting response (outbound=0KiB, inbound=0KiB, 5625ms elapsed, timeout is 5000ms), command=GET, next: GET token:user:dd8f43f0-b5be-4465-9918-042001199185, inst: 0, qu: 0, qs: 1, aw: False, bw: SpinningDown, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, last-in: 2, cur-in: 0, sync-ops: 0, async-ops: 140, serverEndpoint: localhost:6379, conn-sec: 8020, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: MEGA(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=12,Max=32767), POOL: (Threads=4,QueuedItems=0,CompletedItems=15820,Timers=3), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+2025-08-25 16:02:44.653 +03:00 [WRN] Timeout awaiting response (outbound=0KiB, inbound=0KiB, 5625ms elapsed, timeout is 5000ms), command=GET, next: GET token:user:dd8f43f0-b5be-4465-9918-042001199185, inst: 0, qu: 0, qs: 1, aw: False, bw: SpinningDown, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, last-in: 2, cur-in: 0, sync-ops: 0, async-ops: 140, serverEndpoint: localhost:6379, conn-sec: 8020, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: MEGA(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=12,Max=32767), POOL: (Threads=4,QueuedItems=0,CompletedItems=15820,Timers=3), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+2025-08-25 16:02:44.679 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 16:02:44.682 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 16:02:50.638 +03:00 [INF] Timeout awaiting response (outbound=0KiB, inbound=0KiB, 5718ms elapsed, timeout is 5000ms), command=GET, next: GET token:user:dd8f43f0-b5be-4465-9918-042001199185, inst: 0, qu: 0, qs: 2, aw: False, bw: SpinningDown, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, last-in: 2, cur-in: 0, sync-ops: 0, async-ops: 141, serverEndpoint: localhost:6379, conn-sec: 8025.99, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: MEGA(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=12,Max=32767), POOL: (Threads=4,QueuedItems=0,CompletedItems=15838,Timers=3), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+2025-08-25 16:02:50.642 +03:00 [WRN] Timeout awaiting response (outbound=0KiB, inbound=0KiB, 5718ms elapsed, timeout is 5000ms), command=GET, next: GET token:user:dd8f43f0-b5be-4465-9918-042001199185, inst: 0, qu: 0, qs: 2, aw: False, bw: SpinningDown, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, last-in: 2, cur-in: 0, sync-ops: 0, async-ops: 141, serverEndpoint: localhost:6379, conn-sec: 8025.99, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: MEGA(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=12,Max=32767), POOL: (Threads=4,QueuedItems=0,CompletedItems=15838,Timers=3), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+2025-08-25 16:02:55.647 +03:00 [INF] Timeout awaiting response (outbound=0KiB, inbound=0KiB, 5000ms elapsed, timeout is 5000ms), command=INCR, next: GET token:user:dd8f43f0-b5be-4465-9918-042001199185, inst: 0, qu: 0, qs: 3, aw: False, bw: SpinningDown, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, last-in: 2, cur-in: 0, sync-ops: 0, async-ops: 142, serverEndpoint: localhost:6379, conn-sec: 8030.99, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: MEGA(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=12,Max=32767), POOL: (Threads=4,QueuedItems=0,CompletedItems=15844,Timers=3), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+2025-08-25 16:02:55.650 +03:00 [WRN] Timeout awaiting response (outbound=0KiB, inbound=0KiB, 5000ms elapsed, timeout is 5000ms), command=INCR, next: GET token:user:dd8f43f0-b5be-4465-9918-042001199185, inst: 0, qu: 0, qs: 3, aw: False, bw: SpinningDown, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, last-in: 2, cur-in: 0, sync-ops: 0, async-ops: 142, serverEndpoint: localhost:6379, conn-sec: 8030.99, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: MEGA(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=12,Max=32767), POOL: (Threads=4,QueuedItems=0,CompletedItems=15844,Timers=3), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+2025-08-25 16:03:01.643 +03:00 [INF] Timeout awaiting response (outbound=0KiB, inbound=0KiB, 5953ms elapsed, timeout is 5000ms), command=SETEX, next: GET token:user:dd8f43f0-b5be-4465-9918-042001199185, inst: 0, qu: 0, qs: 4, aw: False, bw: SpinningDown, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, last-in: 2, cur-in: 0, sync-ops: 0, async-ops: 143, serverEndpoint: localhost:6379, conn-sec: 8036.99, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: MEGA(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=12,Max=32767), POOL: (Threads=4,QueuedItems=0,CompletedItems=15856,Timers=3), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+2025-08-25 16:03:01.649 +03:00 [WRN] Timeout awaiting response (outbound=0KiB, inbound=0KiB, 5953ms elapsed, timeout is 5000ms), command=SETEX, next: GET token:user:dd8f43f0-b5be-4465-9918-042001199185, inst: 0, qu: 0, qs: 4, aw: False, bw: SpinningDown, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, last-in: 2, cur-in: 0, sync-ops: 0, async-ops: 143, serverEndpoint: localhost:6379, conn-sec: 8036.99, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: MEGA(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=12,Max=32767), POOL: (Threads=4,QueuedItems=0,CompletedItems=15856,Timers=3), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+2025-08-25 16:03:07.638 +03:00 [INF] The message timed out in the backlog attempting to send because no connection became available, command=GET, timeout: 5000, inst: 0, qu: 0, qs: 12, aw: False, bw: CheckingForTimeout, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 144, serverEndpoint: localhost:6379, conn-sec: 5.98, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: MEGA(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=0,Free=32767,Min=12,Max=32767), POOL: (Threads=5,QueuedItems=0,CompletedItems=15871,Timers=3), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+2025-08-25 16:03:07.641 +03:00 [WRN] The message timed out in the backlog attempting to send because no connection became available, command=GET, timeout: 5000, inst: 0, qu: 0, qs: 12, aw: False, bw: CheckingForTimeout, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 144, serverEndpoint: localhost:6379, conn-sec: 5.98, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: MEGA(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=0,Free=32767,Min=12,Max=32767), POOL: (Threads=5,QueuedItems=0,CompletedItems=15871,Timers=3), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+2025-08-25 16:03:57.635 +03:00 [INF] The message timed out in the backlog attempting to send because no connection became available, command=INCR, timeout: 5000, inst: 0, qu: 0, qs: 12, aw: False, bw: CheckingForTimeout, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 145, serverEndpoint: localhost:6379, conn-sec: 55.98, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: MEGA(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=0,Free=32767,Min=12,Max=32767), POOL: (Threads=4,QueuedItems=0,CompletedItems=15948,Timers=3), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+2025-08-25 16:03:57.638 +03:00 [WRN] The message timed out in the backlog attempting to send because no connection became available, command=INCR, timeout: 5000, inst: 0, qu: 0, qs: 12, aw: False, bw: CheckingForTimeout, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, last-in: 0, cur-in: 0, sync-ops: 0, async-ops: 145, serverEndpoint: localhost:6379, conn-sec: 55.98, aoc: 0, mc: 1/1/0, mgr: 10 of 10 available, clientName: MEGA(SE.Redis-v2.8.41.44383), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=0,Free=32767,Min=12,Max=32767), POOL: (Threads=4,QueuedItems=0,CompletedItems=15948,Timers=3), v: 2.8.41.44383 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+2025-08-25 16:16:24.283 +03:00 [INF] Object reference not set to an instance of an object.
+2025-08-25 16:16:24.315 +03:00 [WRN] Object reference not set to an instance of an object.
+2025-08-25 16:19:51.723 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 16:19:51.726 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 16:19:51.754 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 16:19:51.756 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 16:19:52.040 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 16:19:52.042 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 16:29:05.751 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 16:29:05.773 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 16:30:09.464 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 16:30:09.467 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 16:30:09.498 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 16:30:09.500 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 16:30:09.778 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 16:30:09.780 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 16:33:01.335 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 16:33:01.337 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 16:33:01.359 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 16:33:01.361 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 16:33:01.642 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 16:33:01.645 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 16:39:58.618 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 16:39:58.641 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 16:39:58.674 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 16:39:58.677 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 16:39:59.129 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 16:39:59.132 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 16:40:06.530 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 16:40:06.533 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 16:42:11.770 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 16:42:11.773 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 16:45:24.219 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 16:45:24.242 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 16:47:18.329 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 16:47:18.333 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 16:50:17.190 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 16:50:17.193 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 16:50:17.223 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 16:50:17.225 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 16:50:17.498 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 16:50:17.500 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 16:57:40.057 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 16:57:40.082 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 17:00:32.318 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 17:00:32.320 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 17:03:07.698 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 17:03:07.728 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 17:03:07.761 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 17:03:07.763 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 17:03:08.031 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 17:03:08.033 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 17:06:10.939 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 17:06:10.941 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 17:06:10.965 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 17:06:10.968 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 17:06:11.253 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 17:06:11.255 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 17:43:43.960 +03:00 [INF] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 02:37:55 م', Current time (UTC): '25/08/2025 02:43:43 م'.
+2025-08-25 17:43:43.985 +03:00 [WRN] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 02:37:55 م', Current time (UTC): '25/08/2025 02:43:43 م'.
+2025-08-25 17:43:44.020 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 17:43:44.023 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 17:52:07.718 +03:00 [INF] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 02:49:36 م', Current time (UTC): '25/08/2025 02:52:07 م'.
+2025-08-25 17:52:07.740 +03:00 [WRN] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 02:49:36 م', Current time (UTC): '25/08/2025 02:52:07 م'.
+2025-08-25 17:52:07.774 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 17:52:07.776 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 17:54:55.745 +03:00 [INF] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 02:52:56 م', Current time (UTC): '25/08/2025 02:54:55 م'.
+2025-08-25 17:54:55.748 +03:00 [WRN] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 02:52:56 م', Current time (UTC): '25/08/2025 02:54:55 م'.
+2025-08-25 17:54:55.777 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 17:54:55.780 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 17:56:15.354 +03:00 [INF] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 02:55:16 م', Current time (UTC): '25/08/2025 02:56:15 م'.
+2025-08-25 17:56:15.358 +03:00 [WRN] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 02:55:16 م', Current time (UTC): '25/08/2025 02:56:15 م'.
+2025-08-25 17:56:15.386 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 17:56:15.388 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 17:58:12.653 +03:00 [INF] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 02:57:24 م', Current time (UTC): '25/08/2025 02:58:12 م'.
+2025-08-25 17:58:12.656 +03:00 [WRN] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 02:57:24 م', Current time (UTC): '25/08/2025 02:58:12 م'.
+2025-08-25 17:58:12.685 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 17:58:12.687 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 17:59:55.373 +03:00 [INF] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 02:59:44 م', Current time (UTC): '25/08/2025 02:59:55 م'.
+2025-08-25 17:59:55.393 +03:00 [WRN] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 02:59:44 م', Current time (UTC): '25/08/2025 02:59:55 م'.
+2025-08-25 17:59:55.434 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 17:59:55.437 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 18:07:05.525 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 18:07:05.547 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 18:09:32.984 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 18:09:32.987 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 18:09:33.019 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 18:09:33.022 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 18:10:20.764 +03:00 [INF] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 03:10:01 م', Current time (UTC): '25/08/2025 03:10:20 م'.
+2025-08-25 18:10:20.767 +03:00 [WRN] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 03:10:01 م', Current time (UTC): '25/08/2025 03:10:20 م'.
+2025-08-25 18:10:20.792 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 18:10:20.795 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 18:11:52.261 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 18:11:52.264 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 18:11:52.292 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 18:11:52.294 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 18:11:54.217 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 18:11:54.220 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 18:11:54.244 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 18:11:54.246 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 18:47:56.611 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 18:47:56.613 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 18:48:58.784 +03:00 [INF] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 03:48:22 م', Current time (UTC): '25/08/2025 03:48:58 م'.
+2025-08-25 18:48:58.787 +03:00 [WRN] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 03:48:22 م', Current time (UTC): '25/08/2025 03:48:58 م'.
+2025-08-25 18:48:58.811 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 18:48:58.814 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 19:10:36.853 +03:00 [INF] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 04:00:46 م', Current time (UTC): '25/08/2025 04:10:36 م'.
+2025-08-25 19:10:36.857 +03:00 [WRN] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '25/08/2025 04:00:46 م', Current time (UTC): '25/08/2025 04:10:36 م'.
+2025-08-25 19:10:36.885 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 19:10:36.888 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 19:16:39.839 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 19:16:39.866 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 19:16:39.904 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 19:16:39.907 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 19:21:47.384 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 19:21:47.409 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 19:21:47.437 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 19:21:47.440 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 19:24:39.096 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 19:24:39.099 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 19:24:39.122 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 19:24:39.124 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 19:35:30.148 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 19:35:30.172 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 19:35:30.204 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 19:35:30.207 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 19:35:58.174 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 19:35:58.196 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 19:46:10.826 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 19:46:10.829 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 19:46:10.859 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 19:46:10.862 +03:00 [WRN] StatusCode cannot be set because the response has already started.
+2025-08-25 19:46:55.297 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-08-25 19:46:55.300 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-08-25 19:46:55.321 +03:00 [INF] StatusCode cannot be set because the response has already started.
+2025-08-25 19:46:55.324 +03:00 [WRN] StatusCode cannot be set because the response has already started.

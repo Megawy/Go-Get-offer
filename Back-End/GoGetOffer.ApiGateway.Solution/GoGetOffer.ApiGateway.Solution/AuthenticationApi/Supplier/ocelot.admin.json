@@ -1,0 +1,76 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/supplier/admin/join",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier/admin/join",
+      "UpstreamHttpMethod": [ "GET", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplier/admin/join/id",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier/admin/join/id",
+      "UpstreamHttpMethod": [ "GET", "POST", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplier/admin/Supplieres",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier/admin/Supplieres",
+      "UpstreamHttpMethod": [ "GET", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplier/admin/Profile",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier/admin/Profile",
+      "UpstreamHttpMethod": [ "GET", "DELETE", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplier/admin/Pending",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier/admin/Pending",
+      "UpstreamHttpMethod": [ "GET", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplier/admin/update",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier/admin/update",
+      "UpstreamHttpMethod": [ "PUT", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    }
+  ]
+}

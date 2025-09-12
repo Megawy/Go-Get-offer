@@ -1,0 +1,86 @@
+2025-09-02 07:54:35.875 +03:00 [INF] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '31/08/2025 11:17:30 ص', Current time (UTC): '02/09/2025 04:54:35 ص'.
+2025-09-02 07:54:35.904 +03:00 [WRN] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '31/08/2025 11:17:30 ص', Current time (UTC): '02/09/2025 04:54:35 ص'.
+2025-09-02 07:56:29.075 +03:00 [INF] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28/08/2025 12:22:34 م', Current time (UTC): '02/09/2025 04:56:28 ص'.
+2025-09-02 07:56:29.080 +03:00 [WRN] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28/08/2025 12:22:34 م', Current time (UTC): '02/09/2025 04:56:28 ص'.
+2025-09-02 08:00:24.620 +03:00 [INF] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28/08/2025 12:22:34 م', Current time (UTC): '02/09/2025 04:59:41 ص'.
+2025-09-02 08:00:24.626 +03:00 [WRN] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28/08/2025 12:22:34 م', Current time (UTC): '02/09/2025 04:59:41 ص'.
+2025-09-02 08:00:45.751 +03:00 [INF] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28/08/2025 12:22:34 م', Current time (UTC): '02/09/2025 05:00:45 ص'.
+2025-09-02 08:00:45.777 +03:00 [WRN] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28/08/2025 12:22:34 م', Current time (UTC): '02/09/2025 05:00:45 ص'.
+2025-09-02 08:01:38.374 +03:00 [INF] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28/08/2025 12:22:34 م', Current time (UTC): '02/09/2025 05:01:38 ص'.
+2025-09-02 08:01:38.399 +03:00 [WRN] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28/08/2025 12:22:34 م', Current time (UTC): '02/09/2025 05:01:38 ص'.
+2025-09-02 08:01:57.324 +03:00 [INF] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28/08/2025 12:22:34 م', Current time (UTC): '02/09/2025 05:01:51 ص'.
+2025-09-02 08:01:57.328 +03:00 [WRN] IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '28/08/2025 12:22:34 م', Current time (UTC): '02/09/2025 05:01:51 ص'.
+2025-09-02 08:03:21.075 +03:00 [INF] Token has expired.
+2025-09-02 08:03:21.100 +03:00 [WRN] Token has expired.
+2025-09-02 08:05:23.939 +03:00 [INF] Token has expired.
+2025-09-02 08:05:23.943 +03:00 [WRN] Token has expired.
+2025-09-02 08:06:04.046 +03:00 [INF] Token has expired.
+2025-09-02 08:06:04.050 +03:00 [WRN] Token has expired.
+2025-09-02 08:24:01.223 +03:00 [INF] Token has expired.
+2025-09-02 08:24:01.251 +03:00 [WRN] Token has expired.
+2025-09-02 14:09:44.659 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-09-02 14:09:44.689 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-09-02 14:30:26.233 +03:00 [INF] Missing type map configuration or unsupported mapping.
+
+Mapping types:
+List`1 -> SupplierUpdateProfileDTO
+System.Collections.Generic.List`1[[AuthenticationApi.Domain.Entites.Supplier.SuppilerProfileUpdate, AuthenticationApi.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> GoGetOffer.SharedLibraySolution.DTOs.Supplier.UpdateRequest.SupplierUpdateProfileDTO
+2025-09-02 14:30:26.264 +03:00 [WRN] Missing type map configuration or unsupported mapping.
+
+Mapping types:
+List`1 -> SupplierUpdateProfileDTO
+System.Collections.Generic.List`1[[AuthenticationApi.Domain.Entites.Supplier.SuppilerProfileUpdate, AuthenticationApi.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> GoGetOffer.SharedLibraySolution.DTOs.Supplier.UpdateRequest.SupplierUpdateProfileDTO
+2025-09-02 14:33:13.743 +03:00 [INF] Missing type map configuration or unsupported mapping.
+
+Mapping types:
+List`1 -> SupplierUpdateProfileDTO
+System.Collections.Generic.List`1[[AuthenticationApi.Domain.Entites.Supplier.SuppilerProfileUpdate, AuthenticationApi.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> GoGetOffer.SharedLibraySolution.DTOs.Supplier.UpdateRequest.SupplierUpdateProfileDTO
+2025-09-02 14:33:13.780 +03:00 [WRN] Missing type map configuration or unsupported mapping.
+
+Mapping types:
+List`1 -> SupplierUpdateProfileDTO
+System.Collections.Generic.List`1[[AuthenticationApi.Domain.Entites.Supplier.SuppilerProfileUpdate, AuthenticationApi.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> GoGetOffer.SharedLibraySolution.DTOs.Supplier.UpdateRequest.SupplierUpdateProfileDTO
+2025-09-02 14:34:26.984 +03:00 [INF] Missing type map configuration or unsupported mapping.
+
+Mapping types:
+List`1 -> SupplierUpdateProfileDTO
+System.Collections.Generic.List`1[[AuthenticationApi.Domain.Entites.Supplier.SuppilerProfileUpdate, AuthenticationApi.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> GoGetOffer.SharedLibraySolution.DTOs.Supplier.UpdateRequest.SupplierUpdateProfileDTO
+2025-09-02 14:34:26.987 +03:00 [WRN] Missing type map configuration or unsupported mapping.
+
+Mapping types:
+List`1 -> SupplierUpdateProfileDTO
+System.Collections.Generic.List`1[[AuthenticationApi.Domain.Entites.Supplier.SuppilerProfileUpdate, AuthenticationApi.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> GoGetOffer.SharedLibraySolution.DTOs.Supplier.UpdateRequest.SupplierUpdateProfileDTO
+2025-09-02 17:07:38.865 +03:00 [INF] Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Response`1 -> SupplierUpdateProfileDTO
+GoGetOffer.SharedLibraySolution.Responses.Response`1[[AuthenticationApi.Domain.Entites.Supplier.SuppilerProfileUpdate, AuthenticationApi.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> GoGetOffer.SharedLibraySolution.DTOs.Supplier.UpdateRequest.SupplierUpdateProfileDTO
+2025-09-02 17:07:38.899 +03:00 [WRN] Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Response`1 -> SupplierUpdateProfileDTO
+GoGetOffer.SharedLibraySolution.Responses.Response`1[[AuthenticationApi.Domain.Entites.Supplier.SuppilerProfileUpdate, AuthenticationApi.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> GoGetOffer.SharedLibraySolution.DTOs.Supplier.UpdateRequest.SupplierUpdateProfileDTO
+2025-09-02 17:09:44.278 +03:00 [INF] Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Response`1 -> SupplierUpdateProfileDTO
+GoGetOffer.SharedLibraySolution.Responses.Response`1[[AuthenticationApi.Domain.Entites.Supplier.SuppilerProfileUpdate, AuthenticationApi.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> GoGetOffer.SharedLibraySolution.DTOs.Supplier.UpdateRequest.SupplierUpdateProfileDTO
+2025-09-02 17:09:44.308 +03:00 [WRN] Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Response`1 -> SupplierUpdateProfileDTO
+GoGetOffer.SharedLibraySolution.Responses.Response`1[[AuthenticationApi.Domain.Entites.Supplier.SuppilerProfileUpdate, AuthenticationApi.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> GoGetOffer.SharedLibraySolution.DTOs.Supplier.UpdateRequest.SupplierUpdateProfileDTO
+2025-09-02 17:11:40.509 +03:00 [INF] Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Response`1 -> SupplierUpdateProfileDTO
+GoGetOffer.SharedLibraySolution.Responses.Response`1[[AuthenticationApi.Domain.Entites.Supplier.SuppilerProfileUpdate, AuthenticationApi.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> GoGetOffer.SharedLibraySolution.DTOs.Supplier.UpdateRequest.SupplierUpdateProfileDTO
+2025-09-02 17:11:40.538 +03:00 [WRN] Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Response`1 -> SupplierUpdateProfileDTO
+GoGetOffer.SharedLibraySolution.Responses.Response`1[[AuthenticationApi.Domain.Entites.Supplier.SuppilerProfileUpdate, AuthenticationApi.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> GoGetOffer.SharedLibraySolution.DTOs.Supplier.UpdateRequest.SupplierUpdateProfileDTO
+2025-09-02 21:44:07.593 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-09-02 21:44:07.621 +03:00 [WRN] Value cannot be null. (Parameter 's')
+2025-09-02 22:43:36.210 +03:00 [INF] Value cannot be null. (Parameter 's')
+2025-09-02 22:43:36.215 +03:00 [WRN] Value cannot be null. (Parameter 's')

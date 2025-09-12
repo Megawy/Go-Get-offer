@@ -1,0 +1,13 @@
+{
+  "Routes": [
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5000",
+    "DownstreamScheme": "https",
+    "RateLimitOptions": {
+      "ClientIdHeader": "ClientId",
+      "QuotaExceededMessage": "Too many requests. Please wait and try again.",
+      "HttpStatusCode": 429
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/supplier/update",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier/update",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "Limit": 5
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplier/update/last",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/supplier/update/last",
+      "UpstreamHttpMethod": [ "GET", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "Limit": 3
+      }
+    }
+  ]
+}

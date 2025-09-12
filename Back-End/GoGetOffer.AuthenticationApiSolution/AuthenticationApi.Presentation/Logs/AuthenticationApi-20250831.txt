@@ -1,0 +1,96 @@
+2025-08-31 09:25:10.006 +03:00 [INF] The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+2025-08-31 09:25:10.037 +03:00 [WRN] The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+2025-08-31 09:25:31.524 +03:00 [INF] The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+2025-08-31 09:25:31.528 +03:00 [WRN] The configured execution strategy 'SqlServerRetryingExecutionStrategy' does not support user-initiated transactions. Use the execution strategy returned by 'DbContext.Database.CreateExecutionStrategy()' to execute all the operations in the transaction as a retriable unit.
+2025-08-31 09:29:11.210 +03:00 [INF] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:29:11.240 +03:00 [WRN] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:32:22.234 +03:00 [INF] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:32:22.264 +03:00 [WRN] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:32:36.154 +03:00 [INF] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:32:36.160 +03:00 [WRN] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:32:53.770 +03:00 [INF] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:32:53.800 +03:00 [WRN] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:33:30.405 +03:00 [INF] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:33:30.410 +03:00 [WRN] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:33:50.151 +03:00 [INF] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:33:50.181 +03:00 [WRN] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:34:53.088 +03:00 [INF] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:34:53.119 +03:00 [WRN] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:35:08.627 +03:00 [INF] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:35:08.656 +03:00 [WRN] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:36:59.925 +03:00 [INF] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:36:59.953 +03:00 [WRN] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:50:38.935 +03:00 [INF] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:50:38.968 +03:00 [WRN] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:51:18.429 +03:00 [INF] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:51:18.433 +03:00 [WRN] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:51:34.035 +03:00 [INF] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 09:51:34.039 +03:00 [WRN] '-' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9'). Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+2025-08-31 12:29:47.711 +03:00 [INF] IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-08-31 12:29:47.745 +03:00 [WRN] IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-08-31 12:33:20.375 +03:00 [INF] IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-08-31 12:33:20.414 +03:00 [WRN] IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-08-31 12:36:51.468 +03:00 [INF] IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-08-31 12:36:51.503 +03:00 [WRN] IDX10503: Signature validation failed. Token does not have a kid. Keys tried: '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.Text.StringBuilder' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-08-31 12:39:31.147 +03:00 [INF] '}' is an invalid start of a value. Path: $.MinProducts | LineNumber: 2 | BytePositionInLine: 0.
+2025-08-31 12:39:31.178 +03:00 [WRN] '}' is an invalid start of a value. Path: $.MinProducts | LineNumber: 2 | BytePositionInLine: 0.
+2025-08-31 12:41:18.360 +03:00 [INF] The JSON value could not be converted to System.Nullable`1[System.Int32]. Path: $.MinProducts | LineNumber: 1 | BytePositionInLine: 23.
+2025-08-31 12:41:18.363 +03:00 [WRN] The JSON value could not be converted to System.Nullable`1[System.Int32]. Path: $.MinProducts | LineNumber: 1 | BytePositionInLine: 23.
+2025-08-31 12:41:23.352 +03:00 [INF] The JSON value could not be converted to System.Nullable`1[System.Int32]. Path: $.MinProducts | LineNumber: 1 | BytePositionInLine: 24.
+2025-08-31 12:41:23.356 +03:00 [WRN] The JSON value could not be converted to System.Nullable`1[System.Int32]. Path: $.MinProducts | LineNumber: 1 | BytePositionInLine: 24.
+2025-08-31 12:42:25.484 +03:00 [INF] The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. Path: $ | LineNumber: 5 | BytePositionInLine: 0.
+2025-08-31 12:42:25.488 +03:00 [WRN] The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options. Path: $ | LineNumber: 5 | BytePositionInLine: 0.
+2025-08-31 12:42:39.230 +03:00 [INF] The JSON value could not be converted to System.Boolean. Path: $.HasElctroinInvoice | LineNumber: 4 | BytePositionInLine: 29.
+2025-08-31 12:42:39.234 +03:00 [WRN] The JSON value could not be converted to System.Boolean. Path: $.HasElctroinInvoice | LineNumber: 4 | BytePositionInLine: 29.
+2025-08-31 12:42:54.317 +03:00 [INF] The JSON value could not be converted to System.Boolean. Path: $.HasElctroinInvoice | LineNumber: 4 | BytePositionInLine: 29.
+2025-08-31 12:42:54.323 +03:00 [WRN] The JSON value could not be converted to System.Boolean. Path: $.HasElctroinInvoice | LineNumber: 4 | BytePositionInLine: 29.
+2025-08-31 12:43:04.302 +03:00 [INF] The JSON value could not be converted to System.Boolean. Path: $.HasElctroinInvoice | LineNumber: 4 | BytePositionInLine: 35.
+2025-08-31 12:43:04.306 +03:00 [WRN] The JSON value could not be converted to System.Boolean. Path: $.HasElctroinInvoice | LineNumber: 4 | BytePositionInLine: 35.
+2025-08-31 12:46:55.855 +03:00 [INF] The JSON value could not be converted to System.Boolean. Path: $.HasElctroinInvoice | LineNumber: 4 | BytePositionInLine: 29.
+2025-08-31 12:46:55.886 +03:00 [WRN] The JSON value could not be converted to System.Boolean. Path: $.HasElctroinInvoice | LineNumber: 4 | BytePositionInLine: 29.
+2025-08-31 12:47:16.690 +03:00 [INF] The JSON value could not be converted to System.Boolean. Path: $.HasElctroinInvoice | LineNumber: 4 | BytePositionInLine: 34.
+2025-08-31 12:47:16.694 +03:00 [WRN] The JSON value could not be converted to System.Boolean. Path: $.HasElctroinInvoice | LineNumber: 4 | BytePositionInLine: 34.
+2025-08-31 12:47:18.903 +03:00 [INF] The JSON value could not be converted to System.Boolean. Path: $.HasElctroinInvoice | LineNumber: 4 | BytePositionInLine: 34.
+2025-08-31 12:47:18.908 +03:00 [WRN] The JSON value could not be converted to System.Boolean. Path: $.HasElctroinInvoice | LineNumber: 4 | BytePositionInLine: 34.
+2025-08-31 12:47:38.390 +03:00 [INF] The JSON value could not be converted to System.Boolean. Path: $.HasElctroinInvoice | LineNumber: 4 | BytePositionInLine: 34.
+2025-08-31 12:47:38.394 +03:00 [WRN] The JSON value could not be converted to System.Boolean. Path: $.HasElctroinInvoice | LineNumber: 4 | BytePositionInLine: 34.
+2025-08-31 12:47:47.433 +03:00 [INF] The JSON value could not be converted to System.Boolean. Path: $.HasElctroinInvoice | LineNumber: 4 | BytePositionInLine: 34.
+2025-08-31 12:47:47.437 +03:00 [WRN] The JSON value could not be converted to System.Boolean. Path: $.HasElctroinInvoice | LineNumber: 4 | BytePositionInLine: 34.
+2025-08-31 12:48:36.669 +03:00 [INF] The JSON value could not be converted to System.Boolean. Path: $.HasElctroinInvoice | LineNumber: 4 | BytePositionInLine: 30.
+2025-08-31 12:48:36.673 +03:00 [WRN] The JSON value could not be converted to System.Boolean. Path: $.HasElctroinInvoice | LineNumber: 4 | BytePositionInLine: 30.
+2025-08-31 12:51:51.113 +03:00 [INF] Missing type map configuration or unsupported mapping.
+
+Mapping types:
+AddSomeDataSupplierDTO -> SupplierProfile
+GoGetOffer.SharedLibraySolution.DTOs.Supplier.Profile.AddSomeDataSupplierDTO -> AuthenticationApi.Domain.Entites.Supplier.SupplierProfile
+2025-08-31 12:51:51.147 +03:00 [WRN] Missing type map configuration or unsupported mapping.
+
+Mapping types:
+AddSomeDataSupplierDTO -> SupplierProfile
+GoGetOffer.SharedLibraySolution.DTOs.Supplier.Profile.AddSomeDataSupplierDTO -> AuthenticationApi.Domain.Entites.Supplier.SupplierProfile
+2025-08-31 12:52:21.221 +03:00 [INF] The primitive collection property 'SupplierProfile.ActivityType' is configured as required (non-nullable) but has a null value when saving changes. Either mark the property as optional (nullable) or set a non-null value.
+2025-08-31 12:52:21.252 +03:00 [WRN] The primitive collection property 'SupplierProfile.ActivityType' is configured as required (non-nullable) but has a null value when saving changes. Either mark the property as optional (nullable) or set a non-null value.

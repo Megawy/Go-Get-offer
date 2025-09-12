@@ -1,0 +1,38 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/EmailVerification/confirm",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/EmailVerification/confirm",
+      "UpstreamHttpMethod": [ "POST", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "Limit": 5
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/EmailVerification/send",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/api/EmailVerification/send",
+      "UpstreamHttpMethod": [ "POST", "OPTIONS" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "RateLimitOptions": {
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "Limit": 10
+      }
+    }
+  ]
+}
